@@ -1,15 +1,7 @@
-import io,sys
 import os
 import matplotlib.image as img
 import matplotlib.pyplot as plt
-import math
-from mpl_toolkits.mplot3d.axes3d import Axes3D
-from matplotlib import cm
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib.collections import PolyCollection
-from matplotlib import colors as mcolors
 from matplotlib.widgets import Cursor
-import numpy as np
 
 # ------ INSER HERE THE FILE NAMES ----------------
 
