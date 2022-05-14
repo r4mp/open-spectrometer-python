@@ -15,7 +15,7 @@ import numpy as np
 
 imageDirectory = os.getcwd() + "/../docs/images/"
 
-calibFile = imageDirectory + "0026-cropped.png"
+calibFile = imageDirectory + "cfl.png"
 saveFilename = imageDirectory + "cfl_plot.png"
 
 # ----------- END ---------------------------------
