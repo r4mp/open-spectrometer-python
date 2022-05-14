@@ -1,4 +1,5 @@
 import io,sys
+import os
 import matplotlib.image as img
 import matplotlib.pyplot as plt
 import math
@@ -7,11 +8,15 @@ from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.collections import PolyCollection
 from matplotlib import colors as mcolors
+from matplotlib.widgets import Cursor
+import numpy as np
 
 # ------ INSER HERE THE FILE NAMES ----------------
 
-calibFile = "cfl.png"
-saveFilename = "cfl_plot.png"
+imageDirectory = os.getcwd() + "/../docs/images/"
+
+calibFile = imageDirectory + "0026-cropped.png"
+saveFilename = imageDirectory + "cfl_plot.png"
 
 # ----------- END ---------------------------------
 
@@ -61,7 +66,9 @@ def getSpectrumPNG(filename):
 # Initialize and load spectra
 spectrum = getSpectrumPNG(calibFile)
 
-plt.plot(spectrum)
+fig, ax1 = plt.subplots(nrows=1, sharex=True)
+cursor = Cursor(ax1, useblit=True, color='r', lw=0.5)
+ax1.plot(spectrum)
 
 #plt.ylim(0,1)
 plt.xlabel('Pixel ID')
@@ -69,5 +76,3 @@ plt.ylabel('Light intensity')
 
 plt.savefig(saveFilename)
 plt.show()
-
-
