@@ -5,10 +5,10 @@ from matplotlib.widgets import Cursor
 
 # ------ INSER HERE THE FILE NAMES ----------------
 
-imageDirectory = os.getcwd() + "/../docs/images/"
+imageDirectory = os.getcwd() + "/samples/20220517/1652816696.0/"
 
-calibFile = imageDirectory + "cfl.png"
-saveFilename = imageDirectory + "cfl_plot.png"
+calibFile = imageDirectory + "0001_cropped.png"
+saveFilename = imageDirectory + "0001_cropped_plot.png"
 
 # ----------- END ---------------------------------
 
